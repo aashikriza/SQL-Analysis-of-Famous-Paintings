@@ -1,6 +1,6 @@
 # Famous Paintings Database Case Study
 
-This repository contains SQL scripts and data files for a case study involving a database of famous paintings. The database stores detailed information about artists, their artworks, museums where these artworks are displayed, and various related attributes. The case study involves solving several queries to extract meaningful insights from the data.
+This repository contains SQL scripts, data files, and a case study involving a database of famous paintings. The database was created using datasets obtained from Kaggle and stored in PostgreSQL. The case study involves solving several queries to extract meaningful insights from the data.
 
 ## Table Descriptions
 
@@ -104,17 +104,33 @@ Below are some of the key queries solved in this case study:
 10. Who are the top 5 most popular artists?
 11. Which museum is open for the longest duration during a day? Display museum name, state, hours open, and the specific day.
 
-## Usage
-The provided SQL scripts can be used to create and populate these tables in your database. Ensure to download the CSV files and place them in the appropriate directory for loading into your database.
+## Data Upload to PostgreSQL
+The datasets were downloaded from Kaggle and uploaded into a PostgreSQL database using a simple Python script. Below is an example of the script used:
 
-## Contributing
-Feel free to contribute to this project by submitting pull requests. For major changes, please open an issue first to discuss what you would like to change.
+### Python Script for Uploading Data
+```python
+import pandas as pd
+from sqlalchemy import create_engine
 
-## License
-This project is licensed under the MIT License.
+# Database connection
+engine = create_engine('postgresql://username:password@localhost:5432/yourdatabase')
 
-## Contact
-If you have any questions or suggestions, please feel free to open an issue or contact the repository owner.
+# Load CSV files into pandas DataFrames
+artists = pd.read_csv('artists.csv')
+canvas_size = pd.read_csv('canvas_size.csv')
+image_link = pd.read_csv('image_link.csv')
+museums = pd.read_csv('museums.csv')
+museum_hours = pd.read_csv('museum_hours.csv')
+product_size = pd.read_csv('product_size.csv')
+subject = pd.read_csv('subject.csv')
+work = pd.read_csv('work.csv')
 
----
-This README file provides an overview of the database structure, case study queries, and its contents, making it easier for users to understand the schema and how to work with the data.
+# Upload DataFrames to PostgreSQL
+artists.to_sql('artists', engine, if_exists='replace', index=False)
+canvas_size.to_sql('canvas_size', engine, if_exists='replace', index=False)
+image_link.to_sql('image_link', engine, if_exists='replace', index=False)
+museums.to_sql('museums', engine, if_exists='replace', index=False)
+museum_hours.to_sql('museum_hours', engine, if_exists='replace', index=False)
+product_size.to_sql('product_size', engine, if_exists='replace', index=False)
+subject.to_sql('subject', engine, if_exists='replace', index=False)
+work.to_sql('work', engine, if_exists='replace', index=False)
