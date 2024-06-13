@@ -2,7 +2,7 @@
 
 This repository contains SQL scripts, data files, and a case study involving a database of famous paintings. The database was created using datasets obtained from Kaggle and stored in PostgreSQL. The case study involves solving several queries to extract meaningful insights from the data.
 
-![Mona Lisa]([https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/1200px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg](https://www.google.com/url?sa=i&url=https%3A%2F%2Fnypost.com%2F2022%2F07%2F12%2Fwho-was-the-mona-lisa-in-real-life-story-behind-leonardo-da-vincis-famous-painting%2F&psig=AOvVaw2U9aUYHbbsQ1ozhTi9is3R&ust=1718380211711000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPjb86D32IYDFQAAAAAdAAAAABAI))
+![Mona Lisa](https://www.google.com/url?sa=i&url=https%3A%2F%2Fnypost.com%2F2022%2F07%2F12%2Fwho-was-the-mona-lisa-in-real-life-story-behind-leonardo-da-vincis-famous-painting%2F&psig=AOvVaw2U9aUYHbbsQ1ozhTi9is3R&ust=1718380211711000&source=images&cd=vfe&opi=89978449&ved=0CBUQjRxqFwoTCPjb86D32IYDFQAAAAAdAAAAABAI)
 
 
 ## Table Descriptions
