@@ -1,4 +1,4 @@
-# SQL-Analysis-of-Famous-Paintings
+# SQL Analysis of Famous Paintings
 # Famous Paintings Database
 
 This repository contains SQL scripts and data files for a case study involving a database of famous paintings. The database is designed to store detailed information about artists, their artworks, museums where these artworks are displayed, and various related attributes. Below is a comprehensive description of the tables included in the database.
@@ -96,8 +96,7 @@ The provided SQL scripts can be used to create and populate these tables in your
 ## Contributing
 Feel free to contribute to this project by submitting pull requests. For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-This project is licensed under the MIT License.
+
 
 ## Contact
 If you have any questions or suggestions, please feel free to open an issue or contact the repository owner.
