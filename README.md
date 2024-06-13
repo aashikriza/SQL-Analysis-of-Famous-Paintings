@@ -2,9 +2,7 @@
 
 This repository contains SQL scripts, data files, and a case study involving a database of famous paintings. The database was created using datasets obtained from Kaggle and stored in PostgreSQL. The case study involves solving several queries to extract meaningful insights from the data.
 
-![Mona Lisa](https://nypost.com/wp-content/uploads/sites/2/2022/07/1965-Mona-Lisa-Final-1.jpg?quality=75&strip=all)
-
-![Van Gogh](https://cdn.artland.com/wp-content/uploads/2020/07/Van-Gogh-Famous-Paintings-Still-Life-Vase-with-Fifteen-Sunflowers-626x741.jpg)
+![Iconic Artwork](https://www.artsy.net/article/stories-10-art-historys-iconic-works)
 
 ## Table Descriptions
 
