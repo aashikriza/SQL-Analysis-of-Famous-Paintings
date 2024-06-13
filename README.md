@@ -105,32 +105,22 @@ Below are some of the key queries solved in this case study:
 11. Which museum is open for the longest duration during a day? Display museum name, state, hours open, and the specific day.
 
 ## Data Upload to PostgreSQL
-The datasets were downloaded from Kaggle and uploaded into a PostgreSQL database using a simple Python script. Below is an example of the script used:
+The datasets were downloaded from Kaggle and uploaded into a PostgreSQL database using a simple Python script. Below is the script used and please make sure than the datset is downladed in the local device and the location of the files are mentioned in the python code.
 
 ### Python Script for Uploading Data
 ```python
 import pandas as pd
 from sqlalchemy import create_engine
 
-# Database connection
-engine = create_engine('postgresql://username:password@localhost:5432/yourdatabase')
+conn_string = 'postgresql://postgres:'Password'@localhost/Project_1'
+db = create_engine(conn_string)
+conn = db.connect()
 
-# Load CSV files into pandas DataFrames
-artists = pd.read_csv('artists.csv')
-canvas_size = pd.read_csv('canvas_size.csv')
-image_link = pd.read_csv('image_link.csv')
-museums = pd.read_csv('museums.csv')
-museum_hours = pd.read_csv('museum_hours.csv')
-product_size = pd.read_csv('product_size.csv')
-subject = pd.read_csv('subject.csv')
-work = pd.read_csv('work.csv')
+files = ['artist', 'canvas_size','image_link', 'museum_hours','museum','product_size', 'subject', 'work']
 
-# Upload DataFrames to PostgreSQL
-artists.to_sql('artists', engine, if_exists='replace', index=False)
-canvas_size.to_sql('canvas_size', engine, if_exists='replace', index=False)
-image_link.to_sql('image_link', engine, if_exists='replace', index=False)
-museums.to_sql('museums', engine, if_exists='replace', index=False)
-museum_hours.to_sql('museum_hours', engine, if_exists='replace', index=False)
-product_size.to_sql('product_size', engine, if_exists='replace', index=False)
-subject.to_sql('subject', engine, if_exists='replace', index=False)
-work.to_sql('work', engine, if_exists='replace', index=False)
+for file in files:
+
+    df = pd.read_csv('LOCATION OF FILE IN THE SYSTEM')
+    df.to_sql(file, con=conn, if_exists = 'replace', index=False)
+
+
